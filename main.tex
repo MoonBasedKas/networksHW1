@@ -22,24 +22,54 @@
 \section*{Problem 1}
 Given a frequency of 450 KHz, calculate the corresponding time period.\\\\
 
+To determine the period we will use the following formula:\\
+$T = \frac{1}{f}$.\\
+Plugging in $T = \frac{1}{450 * 10^{3}}$.\\
+Giving us the result of $2.22 *10^{-6}$s or a final result of\\
+$2.22\mu$s
+
 \section*{Problem 2}
 Given a time period of 420 ns, calculate the corresponding frequency.\\\\
+To determine the period we will use the following formula:\\
+$f = \frac{1}{T}$.\\
+$f = \frac{1}{420 * 10^{-9}}$
+$f = 2.4 * 10^{6}$.\\
+Giving us a final result of $2.4$MHz.\\
 
-\section*{Problem 3}
+\section*{Problem 3} % NEED TO DO STILL
 What is the bit rate for each of the following signals?\\\\
-\hspace{20mm}a. A signal in which 1 bit lasts 0.00003 s.\\
+\hspace{20mm}a. A signal in which 1 bit lasts 0.00003s.\\
+
 \hspace{20mm}b. A signal in which 25 bits last 350 μs.\\
 
 \section*{Problem 4}
 A device is transmitting data at a rate of 2500 bps.\\\\
 \subP How long does it take to send out a single character (8 bits).\\
+To determine this we will use the following formula.\\
+$t = \frac{s*c}{r}$.\\
+Where t is the time, s is the total amount of characters, c is the size of a character,
+and r is the rate of data transmission.\\
+Plugging in we get\\
+$t = \frac{8}{2500}$\\
+$t = 0.0032$s
+or a final result of $3.2$ms.\\\\
+
 
 \subP How long does it take to send a file of 250,000 characters (each
 character is 8 bits)?\\
+To determine this we will use the following formula.\\
+$t = \frac{s*c}{r}$.\\
+Where t is the time, s is the total amount of characters, c is the size of a character,
+and r is the rate of data transmission.\\
+Plugging in we get\\
+$t = \frac{250,000 * 8}{2500}$.\\
+$t = 800$s.\\
+
 \section*{Problem 5}
 What is the theoretical capacity of a channel in each of the following cases:\\\\
 \subP a. Bandwidth: 350 KHz, SNRdB = 50.\\
-\subP b. Bandwidth: 17 MHz, SNRdB = 25.
+
+\subP b. Bandwidth: 17 MHz, SNRdB = 25.\\
 \section*{Problem 6}
 What is the approximate optimal SNR of a 8-QAM, 240 channel in order to achieve its
 maximum capacity C bit/sec?\\\\
@@ -54,9 +84,10 @@ routers, given the following:\\
 \subP Router Information:\\
 \subP a. Queuing time = 160 μs.\\
 \subP b. Processing time = 10 μs.\\
-Link Characteristics:
+Link Characteristics:\\
 \subP a. Bandwidth = 45 Mb/sec.\\
 \subP b. Propagation speed of the link = 4.5x10^8 m/s.\\
+
 \section*{Problem 9}
 What is the Nyquist sampling rate for each of the following signals?\\
 \subP a. A low-pass signal with bandwidth of 35 Khz.\\
@@ -76,6 +107,12 @@ answer.\\
 Assume that a voice channel occupies a bandwidth of 4 kHz. We need to multiplex 30 voice
 channels with guard bands of 500 Hz separating the channels using FDM. Calculate the total
 required bandwidth.\\
+To determine the required bandwidth we will use the following equation:\\
+$BW = 30(BW_{c} BW_{g})$.\\
+$BW = 30(4000 + 500)$.\\
+$BW = 30 * 4500$.\\
+$BW = 135,000$.\\
+Giving our final result of $135$kHz.\\
 
 \section*{Problem 12}
 Answer the following questions about a T-1 line:\\\\
@@ -114,5 +151,4 @@ subnet? Justify your answer. (Hint: compare their delay equations).\\
 \section*{Problem 17}
 What is the difference between random access protocols, channelizing protocols, and
 controlled access protocols? Briefly compare and contrast the three protocol types.\\
-
 \end{document}
