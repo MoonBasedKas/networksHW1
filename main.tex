@@ -1,4 +1,7 @@
 \documentclass{article}
+
+
+\begin{document}
 \newcommand{\PLtitle}{\setlength{\parindent}{0pt}
 \begin{center}
 
@@ -10,13 +13,12 @@
   Name: Kassidy Maberry\\
 \end{center}
 }
-\begin{document}
 
 \def\Ltitle{Homework 2}
 \def\author{Kassidy Maberry}
 \def\date{2024/09/06}
 \def\subP{\hspace{20mm}}
-\begin{document}
+
 \PLtitle
 
 \section*{Problem 1} % Done
@@ -36,11 +38,24 @@ $f = \frac{1}{420 * 10^{-9}}$
 $f = 2.4 * 10^{6}$.\\
 Giving us a final result of $2.4$MHz.\\
 
-\section*{Problem 3} % NEED TO DO STILL
+\section*{Problem 3} % Done
 What is the bit rate for each of the following signals?\\\\
 \hspace{20mm}a. A signal in which 1 bit lasts 0.00003s.\\
-
-\hspace{20mm}b. A signal in which 25 bits last 350 μs.\\
+To determine the bit rate we will need to first determine the baud rate which is the number of distinct changes over the medium 
+per sec. We can derive the following formula:\\
+$b = \frac{1}{0.00003}$.\\
+$b = 33,333$ bauds.\\
+Now to get the bit rate we need to multiply by the number of bits per change.\\
+$33,333 * 1 = 33,333$.\\
+Giving us a final bitrate of 33.333 kb/s.\\
+\hspace{20mm}b. A signal in which 25 bits last 350 $\mu$s.\\
+To determine the bit rate we will need to first determine the baud rate which is the number of distinct changes over the medium 
+per sec. We can derive the following formula:\\
+$b = \frac{1}{350 * 10^{-6}}$.\\
+$b = 2,860$ bauds.\\
+Finally we need to multiply by the bits per change.\\
+$b_{r} = 2,860 * 25$.\\
+$b_{r} = 71.5$ kb/s.\\
 
 \section*{Problem 4} % Done
 A device is transmitting data at a rate of 2500 bps.\\\\
@@ -97,11 +112,11 @@ What is the max bit-rate capacity of a 4500 Hz, 4096-QAM encoded channel with a 
 Compute the latency of a 126-bit frame that is being sent over a 6000 Km link with 30
 routers, given the following:\\
 \subP Router Information:\\
-\subP a. Queuing time = 160 μs.\\
-\subP b. Processing time = 10 μs.\\
+\subP a. Queuing time = 160 $\mu$s.\\
+\subP b. Processing time = 10 $\mu$s.\\
 Link Characteristics:\\
 \subP a. Bandwidth = 45 Mb/sec.\\
-\subP b. Propagation speed of the link = 4.5x10^8 m/s.\\
+\subP b. Propagation speed of the link = $4.5x10^8$ m/s.\\
 
 \section*{Problem 9} % Done
 What is the Nyquist sampling rate for each of the following signals?\\
@@ -152,7 +167,7 @@ carried by this medium if we use DSSS with the Barker sequence?\\\\
 \section*{Problem 14}
 A path in a digital circuit-switched network has a data rate of 2.5 Mbps. The exchange of 2000 bits
 is required for the setup and tear down phases. The distance between the two parties is 6500 km.
-Answer the following questions if the propagation speed is 2.5x10^8 m/s:\\
+Answer the following questions if the propagation speed is $2.5x10^8$ m/s:\\
 \subP a. What is the total delay if 1500 bits of data are exchanged during the data transfer phase?\\
 \subP b. What is the total delay if 120,000 bits of data are exchanged during the data transfer
 phase?\\
