@@ -19,7 +19,7 @@
 \begin{document}
 \PLtitle
 
-\section*{Problem 1}
+\section*{Problem 1} % Done
 Given a frequency of 450 KHz, calculate the corresponding time period.\\\\
 
 To determine the period we will use the following formula:\\
@@ -28,7 +28,7 @@ Plugging in $T = \frac{1}{450 * 10^{3}}$.\\
 Giving us the result of $2.22 *10^{-6}$s or a final result of\\
 $2.22\mu$s
 
-\section*{Problem 2}
+\section*{Problem 2} % Done
 Given a time period of 420 ns, calculate the corresponding frequency.\\\\
 To determine the period we will use the following formula:\\
 $f = \frac{1}{T}$.\\
@@ -42,7 +42,7 @@ What is the bit rate for each of the following signals?\\\\
 
 \hspace{20mm}b. A signal in which 25 bits last 350 μs.\\
 
-\section*{Problem 4}
+\section*{Problem 4} % Done
 A device is transmitting data at a rate of 2500 bps.\\\\
 \subP How long does it take to send out a single character (8 bits).\\
 To determine this we will use the following formula.\\
@@ -65,11 +65,26 @@ Plugging in we get\\
 $t = \frac{250,000 * 8}{2500}$.\\
 $t = 800$s.\\
 
-\section*{Problem 5}
+\section*{Problem 5} % Done
 What is the theoretical capacity of a channel in each of the following cases:\\\\
 \subP a. Bandwidth: 350 KHz, SNRdB = 50.\\
+To determine this we will use the following equation:\\
+$c = BW * log_{2}(1 + 10^{(SNRdb)/10})$.\\
+$c = 350 * 10^{3} * log_{2}(1 + 10^{50/10})$.\\
+$c = 350 * 10^{3} * log_{2}(1 + 10^{5})$.\\
+$c = 350 * 10^{3} * 13.288$.\\
+$c = 4650 * 10^{3}$.\\
+Giving us a final capacity of 4.65 Mb/s
 
 \subP b. Bandwidth: 17 MHz, SNRdB = 25.\\
+$c = BW * log_{2}(1 + 10^{(SNRdb)/10})$.\\
+$c = 17 * 10^{6} * log_{2}(1 + 10^{25/10})$.\\
+$c = 17 * 10^{6} * log_{2}(1 + 10^{2.5})$.\\
+$c = 17 * 10^{6} * 8.308$.\\
+$c = 141.2 * 10^{6}$.\\
+Giving us a final capacity of 141.2 Mb/s
+
+
 \section*{Problem 6}
 What is the approximate optimal SNR of a 8-QAM, 240 channel in order to achieve its
 maximum capacity C bit/sec?\\\\
@@ -88,12 +103,23 @@ Link Characteristics:\\
 \subP a. Bandwidth = 45 Mb/sec.\\
 \subP b. Propagation speed of the link = 4.5x10^8 m/s.\\
 
-\section*{Problem 9}
+\section*{Problem 9} % Done
 What is the Nyquist sampling rate for each of the following signals?\\
 \subP a. A low-pass signal with bandwidth of 35 Khz.\\
+
+For a low pass filter we can use the following equation:\\
+$N = 2*f_{m}$.\\
+Where $f_{m} = BW$.\\
+Plugging in we get $N = 2*35 * 10^{3}$.\\
+$N = 70,000$ sample/s\\
+
 \subP b. A band-pass signal with bandwidth of 350 KHz if the lowest
 frequency is 250 KHz.\\
-
+For a band pass filter we can use the following equation:\\
+$N = 2*f_{m}$.\\
+Where $f_{m}$ is the highest frequency of the signal.\\
+Plugging in we get $N = 2*(250 + 350) * 10^{3}$.\\
+$N = 1,200,000$ sample/s\\
 
 
 \section*{Problem 10}
@@ -103,7 +129,7 @@ following questions:\\
 \subP b. Which one requires an additional encoding stage before transmitting codes? Justify your
 answer.\\
 
-\section*{Problem 11}
+\section*{Problem 11} % Done
 Assume that a voice channel occupies a bandwidth of 4 kHz. We need to multiplex 30 voice
 channels with guard bands of 500 Hz separating the channels using FDM. Calculate the total
 required bandwidth.\\
