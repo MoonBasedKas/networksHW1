@@ -103,10 +103,21 @@ Giving us a final capacity of 141.2 Mb/s
 \section*{Problem 6}
 What is the approximate optimal SNR of a 8-QAM, 240 channel in order to achieve its
 maximum capacity C bit/sec?\\\\
+To determine this we will need to compare the Nyquist and the Shannon capacity.\\
 
-\section*{Problem 7}
+
+\section*{Problem 7} % NEED TO FINISH
 What is the max bit-rate capacity of a 4500 Hz, 4096-QAM encoded channel with a SNR of
 45 dB?\\
+$c_{ny} = 2B log_{2}(L)$.\\
+$c_{shan} = Blog_{2}(1 * 10^{SNR_{db}/10})$.\\
+Plugging in
+$c_{ny} = 2 * 4500 * log_{2}(4096)$.\\
+$c_{ny} = 9000 * 12$
+$c_{ny} = 108,000$
+$c_{shan} = 4500 * log_{2}(1 + 10^{45/10})$.\\
+$c_{shan} = 4500 * 14.95$.\\
+$c_{shan} = 67275$.\\
 
 \section*{Problem 8}
 Compute the latency of a 126-bit frame that is being sent over a 6000 Km link with 30
@@ -155,7 +166,7 @@ $BW = 30 * 4500$.\\
 $BW = 135,000$.\\
 Giving our final result of $135$kHz.\\
 
-\section*{Problem 12}
+\section*{Problem 12} % NOT STARTED; Remember BW = 1.544 Mb/s
 Answer the following questions about a T-1 line:\\\\
 \subP a. What is the duration of a frame?\\
 \subP b. What is the overhead (number of extra bits per second)?\\
