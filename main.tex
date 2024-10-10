@@ -239,7 +239,15 @@ the same:\\
 
 \section*{Problem 16}
 Is circuit-switching (CS) always faster than datagram (DG) in packet switching over the
-subnet? Justify your answer. (Hint: compare their delay equations).\\
+subnet? Justify your answer. (Hint: compare their delay equations).\\\\
+
+No it is not always faster. If we look at the delay equations circuit switching 
+requires circuit setting up, message transmission, and propagation delay. Meanwhile 
+the datagram will require the message transmission and last packet's propagation, 
+hop processing, and retransmission per hop. So we could obtain a faster datagram 
+speed if the circuit setup is slower than the time it requires the last packet 
+to arrive at its destination.\\
+
 
 \section*{Problem 17}
 What is the difference between random access protocols, channelizing protocols, and
