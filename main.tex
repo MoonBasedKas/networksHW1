@@ -103,21 +103,21 @@ Giving us a final capacity of 141.2 Mb/s
 \section*{Problem 6}
 What is the approximate optimal SNR of a 8-QAM, 240 channel in order to achieve its
 maximum capacity C bit/sec?\\\\
-To determine this we will need to compare the Nyquist and the Shannon capacity.\\
 
 
-\section*{Problem 7} % NEED TO FINISH
+\section*{Problem 7} % Done
 What is the max bit-rate capacity of a 4500 Hz, 4096-QAM encoded channel with a SNR of
 45 dB?\\
 $c_{ny} = 2B log_{2}(L)$.\\
 $c_{shan} = Blog_{2}(1 * 10^{SNR_{db}/10})$.\\
-Plugging in
+Plugging in\\
 $c_{ny} = 2 * 4500 * log_{2}(4096)$.\\
-$c_{ny} = 9000 * 12$
-$c_{ny} = 108,000$
+$c_{ny} = 9000 * 12$\\
+$c_{ny} = 108,000$b/s\\
 $c_{shan} = 4500 * log_{2}(1 + 10^{45/10})$.\\
 $c_{shan} = 4500 * 14.95$.\\
-$c_{shan} = 67275$.\\
+$c_{shan} = 67,275$b/s.\\
+Since $c_{shan} < c_{ny}$ our max-bit rate capacity is $67,275$b/s.\\
 
 \section*{Problem 8}
 Compute the latency of a 126-bit frame that is being sent over a 6000 Km link with 30
@@ -179,9 +179,50 @@ carried by this medium if we use DSSS with the Barker sequence?\\\\
 A path in a digital circuit-switched network has a data rate of 2.5 Mbps. The exchange of 2000 bits
 is required for the setup and tear down phases. The distance between the two parties is 6500 km.
 Answer the following questions if the propagation speed is $2.5x10^8$ m/s:\\
+
 \subP a. What is the total delay if 1500 bits of data are exchanged during the data transfer phase?\\
+To determine the total delay we will use the following formula:\\
+$d_{cs} = s + m_{message} + t$.\\
+Where s is the circuit set up time, m is the message transmission time, and t is the propagation delay.\\
+$s = 2(a + t)$.\\
+where a is the message transmission of the bits required to set up the network.\\
+$m = \frac{b}{n}$.\\
+Where b is the size of our message and n is the data rate. Plugging in we get.\\
+$m = \frac{2000}{2.5*10^{6}} = 0.8 * 10^{-3}$s.\\
+$t = \frac{x}{c}$.\\
+Where x is the distance and c is the propagation speed.\\
+$t = \frac{6,500 * 10^{3}}{2.5*10^{8}}$.\\
+$t = 2.6 * 10^{-2}$s.\\
+Finally we can plug into s and obtain.\\
+$s = 2 * 2.68 * 10^{-2} = 5.36*10^{-2}$s.\\
+Lastly we just have to determine $m_{message}$.\\
+$m_{message} = \frac{b}{n}$.\\
+Where b is the size of our message and n is the data rate. Plugging in we get.\\
+$m_{message} = \frac{1500}{2.5 * 10^{-6}} = 0.06 * 10^{-2}$s.\\
+$s = (5.36 + 2.6 + 0.06)*10^{-2} = 8.02 * 10^{-2}$s.\\
+Giving a total delay of 80.2ms.\\
+
 \subP b. What is the total delay if 120,000 bits of data are exchanged during the data transfer
 phase?\\
+$d_{cs} = s + m_{message} + t$.\\
+Where s is the circuit set up time, m is the message transmission time, and t is the propagation delay.\\
+$s = 2(a + t)$.\\
+where a is the message transmission of the bits required to set up the network.\\
+$m = \frac{b}{n}$.\\
+Where b is the size of our message and n is the data rate. Plugging in we get.\\
+$m = \frac{2000}{2.5*10^{6}} = 0.8 * 10^{-3}$s.\\
+$t = \frac{x}{c}$.\\
+Where x is the distance and c is the propagation speed.\\
+$t = \frac{6,500 * 10^{3}}{2.5*10^{8}}$.\\
+$t = 2.6 * 10^{-2}$s.\\
+Finally we can plug into s and obtain.\\
+$s = 2 * 2.68 * 10^{-2} = 5.36*10^{-2}$s.\\
+Lastly we just have to determine $m_{message}$.\\
+$m_{message} = \frac{b}{n}$.\\
+Where b is the size of our message and n is the data rate. Plugging in we get.\\
+$m_{message} = \frac{120000}{2.5 * 10^{-6}} = 4.8 * 10^{-2}$s.\\
+$s = (5.36 + 2.6 + 4.8)*10^{-2} = 12.76 * 10^{-2}$s.\\
+Giving a total delay of 128ms.\\
 
 \section*{Problem 15}
 Answer the following questions:\\
